@@ -27,7 +27,7 @@ const prompt = getAnalyzePrompt(idea);
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-          "HTTP-Referer": "http://localhost:3001",
+          "HTTP-Referer": process.env.BASE_URL,
           "X-Title": "Startup Analyzer",
         },
         body: JSON.stringify({
